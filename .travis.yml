@@ -1,0 +1,17 @@
+sudo: false
+dist: xenial
+language: generic
+services: docker
+
+env:
+  global:
+    - IMAGE_NAME=lint-image:this
+
+install:
+  - hooks/build
+
+script:
+  - docker images
+
+notifications:
+  email: false
