@@ -24,6 +24,8 @@ build:image:
 
 test:image:
   stage: test
+  before_script:
+    - export CURRENT_IMAGE_NAME="$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
   script:
     - docker pull "$CURRENT_IMAGE_NAME"
     - docker run -v `pwd`:/app "$CURRENT_IMAGE_NAME"
