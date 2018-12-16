@@ -17,4 +17,4 @@ RUN npm install -g \
   dockerfile_lint \
   && npm cache clear --force
 
-CMD ['coala', '--ci']
+CMD ["coala", "--ci"]
