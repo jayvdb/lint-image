@@ -17,10 +17,13 @@ image:
   omit:
     expose: true
 
+requires:
+  - https://github.com/jayvdb/docker-mobans
+
 configuration:
   configuration: .moban.yaml
   template_dir:
-    - ../docker-mobans/.moban.dt/
+    - 'docker-mobans:.moban.dt/'
 targets:
   - Dockerfile: Dockerfile.jj2
   - .dockerfile_lint_rules.yaml: dockerfile_lint_rules.yaml.jj2
