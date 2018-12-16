@@ -1,5 +1,0 @@
----
-  line_rules:
-    EXPOSE:
-      paramSyntaxRegex: /^[\d-\s\w/\\]+$/
-      rules: []
